@@ -33,11 +33,12 @@
         yAxisLabel="Y Label"
         [noBarWhenZero]="true"
         [barPadding]="4"
-        [groupPadding]="16"
+        [groupPadding]="12"
         [yScaleMax]="1000"
         [roundDomains]="false"
         [roundEdges]="false"
         [activeEntries]="[]"
+        [yAxisTickFormatting]="yAxisTickFormat"
         (select)="onSelect($event)"
         (activate)="onActivate($event)"
         (deactivate)="onDeactivate($event)">

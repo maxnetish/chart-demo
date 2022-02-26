@@ -48,6 +48,14 @@ export class NgxChartsDemoPageComponent implements OnInit {
     console.log('onDeactivate: ', $event);
   }
 
+  /**
+   * To supress x ticks label
+   * @param yAxisVal
+   */
+  yAxisTickFormat(yAxisVal: number) {
+    return '';
+  }
+
   handleGeneratebuttonClick() {
     this.chartData = generateDataSet(parseInt(this.xQuantityValue, 10), 3).map(([xName, parts]) => {
       return {
