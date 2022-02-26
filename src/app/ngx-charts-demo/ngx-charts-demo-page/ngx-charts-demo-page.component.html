@@ -1,1 +1,29 @@
-<p>ngx-charts-demo-page works!</p>
+<h1>ngx-charts</h1>
+
+<a
+  href="https://swimlane.gitbook.io/ngx-charts/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Docs
+</a>
+
+<div class="page-row">
+  <div class="chart-ct">
+    <ngx-charts-bar-vertical-2d
+      [scheme]="colorScheme"
+      [results]="chartData"
+      [gradient]="false"
+      [xAxis]="true"
+      [yAxis]="true"
+      [legend]="false"
+      [showXAxisLabel]="false"
+      [showYAxisLabel]="false"
+      xAxisLabel="X Label"
+      yAxisLabel="Y Label"
+      (select)="onSelect($event)"
+      (activate)="onActivate($event)"
+      (deactivate)="onDeactivate($event)">
+    </ngx-charts-bar-vertical-2d>
+  </div>
+</div>

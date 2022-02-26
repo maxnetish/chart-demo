@@ -1,3 +1,7 @@
+# Notes
+To link with angular 12, at first install @anguar/cdk@12 then install ngrx-charts.
+Also install types for d3-selection and d3-scale
+
 # ChartDemo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.16.
