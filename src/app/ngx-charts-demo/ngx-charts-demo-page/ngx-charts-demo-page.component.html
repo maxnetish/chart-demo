@@ -9,21 +9,39 @@
 </a>
 
 <div class="page-row">
-  <div class="chart-ct">
-    <ngx-charts-bar-vertical-2d
-      [scheme]="colorScheme"
-      [results]="chartData"
-      [gradient]="false"
-      [xAxis]="true"
-      [yAxis]="true"
-      [legend]="false"
-      [showXAxisLabel]="false"
-      [showYAxisLabel]="false"
-      xAxisLabel="X Label"
-      yAxisLabel="Y Label"
-      (select)="onSelect($event)"
-      (activate)="onActivate($event)"
-      (deactivate)="onDeactivate($event)">
-    </ngx-charts-bar-vertical-2d>
+  <div class="form-element">
+    <input type="number" class="form-control" [(ngModel)]="xQuantityValue"/>
+  </div>
+
+  <button class="btn btn-primary" (click)="handleGeneratebuttonClick()">Generate data</button>
+</div>
+
+<div class="page-row">
+  <div class="chart-card">
+    <div class="chart-ct">
+      <ngx-charts-bar-vertical-2d
+        #chartRef
+        [scheme]="colorScheme"
+        [results]="chartData"
+        [gradient]="false"
+        [xAxis]="true"
+        [yAxis]="true"
+        [legend]="false"
+        [showXAxisLabel]="false"
+        [showYAxisLabel]="false"
+        xAxisLabel="X Label"
+        yAxisLabel="Y Label"
+        [noBarWhenZero]="true"
+        [barPadding]="4"
+        [groupPadding]="16"
+        [yScaleMax]="1000"
+        [roundDomains]="false"
+        [roundEdges]="false"
+        [activeEntries]="[]"
+        (select)="onSelect($event)"
+        (activate)="onActivate($event)"
+        (deactivate)="onDeactivate($event)">
+      </ngx-charts-bar-vertical-2d>
+    </div>
   </div>
 </div>

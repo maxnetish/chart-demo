@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NgxChartsDemoPageComponent } from './ngx-charts-demo-page/ngx-charts-demo-page.component';
 import { Route, RouterModule } from '@angular/router';
 import { BarChartModule } from '@swimlane/ngx-charts';
+import { FormsModule } from '@angular/forms';
 
 const routes: Route[] = [
   {
@@ -24,6 +25,7 @@ const routes: Route[] = [
     CommonModule,
     RouterModule.forChild(routes),
     BarChartModule,
+    FormsModule,
   ],
 })
 export class NgxChartsDemoModule { }
